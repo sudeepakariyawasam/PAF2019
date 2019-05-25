@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<title>Edit User</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div align="center">
+		<h1>Edit Customer</h1>
+		<br/>
+		<form action="#" th:action="@{/save}" th:object="${user}" method="post">
+			<table border="0" cellpadding="10">
+				<tr>
+					<td>User ID:</td>
+					<td><input class="form-control" type="text" th:field="*{id}" readonly="readonly" placeholder="User ID" required></td>
+				</tr>
+				<tr>
+					<td>User First Name:</td>
+					<td><input class="form-control" type="text" th:field="*{fname}" placeholder="First Name" required></td>
+				</tr>
+				<tr>
+					<td>User Last Name:</td>
+					<td><input class="form-control" type="text" th:field="*{lname}" placeholder="Last Name" required></td>
+				</tr>
+				<tr>
+					<td>Address:</td>
+					<td><input class="form-control" type="text" th:field="*{address}" placeholder="Address" required></td>
+				</tr>
+				<tr>
+					<td>Contacts:</td>
+					<td><input class="form-control" type="text" th:field="*{contact}" placeholder="Contacts" required></td>
+				</tr>
+				<tr>
+					
+					<td colspan="2"/><button type="submit" class="btn btn-success btn-block" >SAVE</button></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
